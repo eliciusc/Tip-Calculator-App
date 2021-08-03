@@ -1,0 +1,56 @@
+:root{
+    --bg-color: hsl(185, 41%, 84%);
+    --ch-bcolor: hsl(0, 0%, 100%);
+    --co-bcolor : hsl(183, 100%, 15%);
+    --fo-color : hsl(184, 14%, 43%);
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('../fonts/SpaceMono-Regular.ttf');
+}
+
+*{
+    font-family: 'Space Mono', monospace;
+}
+
+body{
+    margin: 0px;
+    padding: 10%;
+    background-color: var(--bg-color); 
+}
+
+body p{
+    word-wrap: break-word;
+    text-align: center;
+    margin: 0% 570px 30px 570px;
+    letter-spacing: 0.5rem;
+    font-weight: bold;
+    padding-bottom: 30px;
+    color: var(--fo-color);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.container_hold{
+    display: flex;
+    height: 300px;
+    background-color: var(--ch-bcolor);
+    padding: 30px;
+    border-radius: 25px;
+}
+
+.container_hold div{
+    flex-grow: 1;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.container_input{
+
+}
+
+.container_output{
+    background-color: var(--co-bcolor);
+}
