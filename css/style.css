@@ -16,16 +16,17 @@
 
 body{
     margin: 0px;
-    padding: 10%;
     background-color: var(--bg-color); 
+    margin: 100px 20% 0px 20%;
 }
 
-body p{
+.title p{
     word-wrap: break-word;
     text-align: center;
-    margin: 0% 570px 30px 570px;
+    width: 90px;
     letter-spacing: 0.5rem;
     font-weight: bold;
+    margin: auto;
     padding-bottom: 30px;
     color: var(--fo-color);
 }
@@ -42,15 +43,43 @@ body p{
 }
 
 .container_hold div{
-    flex-grow: 1;
     text-align: center;
     border-radius: 25px;
 }
 
-.container_input{
 
-}
 
 .container_output{
     background-color: var(--co-bcolor);
+}
+
+@media screen and (min-width: 1440px){
+    .container_hold div{
+        flex-grow: 1;
+    }
+}
+
+@media screen and (max-width: 370px){
+    body{
+        margin: 20px 0% 0% 0%;
+        padding: 0;
+        
+    }
+    .container_hold {
+        flex-direction: column;
+        height: 540px;
+        justify-content: flex-start;
+    }
+
+    .container_hold div{
+        text-align: center;
+        border-radius: 25px;
+    }
+
+    .container_input{
+       flex-grow: 2;
+    }
+    .container_output{
+        flex-grow: 1.5;
+    }
 }
