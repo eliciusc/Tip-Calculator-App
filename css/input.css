@@ -1,0 +1,59 @@
+:root{
+    --bg-color: hsl(185, 41%, 84%);
+    --ch-bcolor: hsl(0, 0%, 100%);
+    --co-bcolor : hsl(183, 100%, 15%);
+    --fo-color : hsl(184, 14%, 43%);
+    --fc-color: hsl(189, 41%, 97%);
+    --sc-color: hsl(172, 67%, 45%);
+    --InputDivs-margin: 0px 30px 0px 10px;
+}
+
+.bill{
+    background-color: hsl(189, 41%, 97%);
+    background-image: url("/images/icon-dollar.svg");
+    background-repeat: no-repeat;
+    background-position: 8px 9px;
+    height: 30px;
+    padding: 6px 20px 0px 0px;
+    margin: var(--InputDivs-margin);
+    text-align: end;
+    border-radius: 5px;
+}
+
+.n_people{
+    background-color: hsl(189, 41%, 97%);
+    background-image: url("/images/icon-dollar.svg");
+    background-repeat: no-repeat;
+    background-position: 8px 9px;
+    height: 30px;
+    padding: 6px 20px 0px 0px;
+    margin: var(--InputDivs-margin);
+    text-align: end;
+    border-radius: 5px;
+}
+
+.tip_grid{
+    display: grid;
+    grid-template-columns: repeat(3, 0.5fr);
+    margin: var(--InputDivs-margin);
+    row-gap: 10px;
+    
+}
+
+.tip_grid div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 80px;
+    height: 34px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    background-color: var(--co-bcolor);
+    color: var(--ch-bcolor);
+}
+
+.tip_grid .tC{
+    background-color: var(--bg-color);
+    color: var(--fo-color);
+}

@@ -1,3 +1,6 @@
+@import "/css/input.css";
+@import "/css/output.css";
+
 :root{
     --bg-color: hsl(185, 41%, 84%);
     --ch-bcolor: hsl(0, 0%, 100%);
@@ -11,10 +14,14 @@
 }
 
 *{
+    box-sizing: border-box;
     font-family: 'Space Mono', monospace;
 }
 
 body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     margin: 0px;
     background-color: var(--bg-color); 
     margin: 100px 20% 0px 20%;
@@ -31,31 +38,45 @@ body{
     color: var(--fo-color);
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
-
-.container_hold{
+.container_main{
     display: flex;
-    height: 300px;
+    height: 330px;
     background-color: var(--ch-bcolor);
     padding: 30px;
-    border-radius: 25px;
+    border-radius: 20px;
 }
 
-.container_hold div{
+.container_main > div{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     text-align: center;
-    border-radius: 25px;
+    border-radius: 20px;
+    width: 300px;
 }
 
-
+.container_input p{
+    width: 300px;
+    text-align: start;
+    margin:15px 0px 5px 10px;
+    font-size: 0.7rem;
+}
 
 .container_output{
     background-color: var(--co-bcolor);
 }
 
+.container_output p{
+    text-align: start;
+    margin:15px 0px 5px 10px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
 @media screen and (min-width: 1440px){
-    .container_hold div{
-        flex-grow: 1;
+    .container_main > div{
+       flex-grow: 1;
     }
 }
 
@@ -63,23 +84,17 @@ body{
     body{
         margin: 20px 0% 0% 0%;
         padding: 0;
-        
     }
-    .container_hold {
+    .container_main {
         flex-direction: column;
-        height: 540px;
-        justify-content: flex-start;
+        height: 600px;
+        width: 340px;
     }
 
-    .container_hold div{
-        text-align: center;
-        border-radius: 25px;
+    .container_main .container_output{
+        flex-grow: 2;
     }
-
-    .container_input{
-       flex-grow: 2;
-    }
-    .container_output{
-        flex-grow: 1.5;
+    .container_main .container_input{
+        flex-grow: 1;
     }
 }
