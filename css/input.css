@@ -39,7 +39,7 @@
     
 }
 
-.tip_grid div{
+.tip_grid div, .tip_grid .input-custom{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,6 +59,15 @@
 
 
 .tip_grid .tC{
+    text-align: end;
     background-color: var(--fc-color);
     color: var(--fo-color);
+}
+
+.tip_grid .input-custom{
+    border: none;
+    background-color: var(--fc-color);
+    color: var(--co-color);
+    text-align: end;
+    padding-right: 10px;
 }

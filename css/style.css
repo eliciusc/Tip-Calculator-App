@@ -1,5 +1,5 @@
-@import "/css/input.css";
-@import "/css/output.css";
+@import url("/css/input.css");
+@import url("/css/output.css");
 
 :root{
     --bg-color: hsl(185, 41%, 84%);
@@ -119,7 +119,7 @@ body{
         justify-items: stretch;
     }
 
-    .tip_grid div{
+    .tip_grid div, .tip_grid .input-custom{
         width: 135px;
     }
     
