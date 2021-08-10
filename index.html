@@ -1,44 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./css/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="title">
+    <p>SPLITTER</p>
   </div>
+  <div class="container_main">
+    <div class="container_input">
+      <div class="inputs">
+        <p>Bill</p>
+        <input type="text" class="bill" placeholder="0"></input>
+      </div>
+      <p>Select Tip %</p>
+      <div class="tip_grid">
+        <div class="t1">5%</div>
+        <div class="t2">10%</div>
+        <div class="t3">15%</div>
+        <div class="t4">20%</div>
+        <div class="t5">25%</div>
+        <div tip-custom class="tC">Custom%</div>
+      </div>
+      <div class="inputs">
+        <p>Number of People</p>
+        <input type="text" class="n_people" placeholder="0"></input>
+      </div>
+    </div>
+    <div class="container_output">
+      <div class="amount">
+        <p class="label1 standards">Tip Amount<span class="person"> / person</span></p>
+        <div>$0.00</div>
+      </div>
+      <div class="amount">
+        <p class="label2 standards">Total<span class="person"> / person</span></p>
+        <div>$0.00</div>
+      </div>
+      <div class="reset_button" >
+        <button class="disabled">RESET</button>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Elicius Cordeiro</a>.
+    </div>
+  </footer>
+  <script src="/app.js"></script>
 </body>
 </html>

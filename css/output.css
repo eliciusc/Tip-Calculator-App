@@ -1,0 +1,65 @@
+:root{
+    --bg-color: hsl(185, 41%, 84%);
+    --ch-bcolor: hsl(0, 0%, 100%);
+    --seinao-color: hsl(186, 14%, 43%);
+    --co-bcolor : hsl(183, 100%, 15%);
+    --fo-color : hsl(184, 14%, 43%);
+    --fc-color: hsl(189, 41%, 97%);
+    --sc-color: hsl(172, 67%, 45%);
+    --outPutDivs-margin: 20px 50px 0px 10px;
+}
+
+.container_output > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.label1{
+    padding: 10px 50px 0px 30px;
+}
+
+.label2{
+    padding:0px 90px 0px 30px;
+}
+
+.standards{
+    font-weight: 700;
+    color: var(--fc-color);
+    font-size: 0.8rem;
+    text-align: start;
+    align-self: center;
+    word-wrap: break-word;
+}
+
+.person{
+    color: var(--fo-color);
+    font-size: .6rem;
+}
+
+.amount div{
+    color: var(--sc-color);
+    text-align: end;
+    align-self: flex-end;
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 16px 0px 16px 0px;
+    padding-right: 30px;
+}
+
+.reset_button button{
+    margin-top: 50px;
+    padding: 8px 100px;
+    border-radius: 5px;
+    background-color: var(--sc-color);
+    color: var(--co-color);
+    font-weight: 700;
+    align-self: center;
+    border: none;
+}
+
+.disabled{
+    opacity: 0.2;
+    cursor: none;
+}

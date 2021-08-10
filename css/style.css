@@ -1,0 +1,130 @@
+@import "/css/input.css";
+@import "/css/output.css";
+
+:root{
+    --bg-color: hsl(185, 41%, 84%);
+    --ch-bcolor: hsl(0, 0%, 100%);
+    --co-bcolor : hsl(183, 100%, 15%);
+    --fo-color : hsl(184, 14%, 43%);
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('../fonts/SpaceMono-Regular.ttf');
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px;
+    background-color: var(--bg-color); 
+    margin: 100px 20% 0px 20%;
+}
+
+.title p{
+    word-wrap: break-word;
+    text-align: center;
+    width: 90px;
+    letter-spacing: 0.5rem;
+    font-weight: bold;
+    margin: auto;
+    padding-bottom: 30px;
+    color: var(--fo-color);
+}
+
+.container_main{
+    display: flex;
+    height: 330px;
+    background-color: var(--ch-bcolor);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.container_main > div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.container_input p, .inputs p{
+    text-align: start;
+    margin:15px 0px 5px 10px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--fo-color);
+}
+
+.container_output{
+    background-color: var(--co-bcolor);
+}
+
+.container_output > p{
+    text-align: start;
+    margin:15px 0px 5px 10px;
+    flex-direction: column;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (min-width: 1440px){
+    .container_main > div{
+       flex-grow: 1;
+    }
+}
+
+@media screen and (max-width: 370px){
+    body{
+        margin: 20px 0% 0% 0%;
+        padding: 0;
+    }
+    .container_main {
+        padding-top: 10px;
+        flex-direction: column;
+        height: 600px;
+    }
+
+    .container_output{
+        flex-grow: 1;
+    }
+
+    .amount p{
+        padding-top: 0px;
+    }
+
+    .container_input{
+        flex-grow: 2;
+    }
+
+    .bill, .n_people{
+        margin: 0px 10px 0px 10px;
+    }
+
+    .tip_grid{
+        margin-right: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: stretch;
+    }
+
+    .tip_grid div, .tip_grid .input-custom{
+        width: 135px;
+    }
+    
+    .reset_button button{
+        margin: 20px;
+    }
+    
+}
