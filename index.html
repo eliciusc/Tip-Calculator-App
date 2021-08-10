@@ -16,8 +16,10 @@
   </div>
   <div class="container_main">
     <div class="container_input">
-      <p>Bill</p>
-      <form type="text" class="bill">0</form>
+      <div class="inputs">
+        <p>Bill</p>
+        <input type="text" class="bill" placeholder="0"></input>
+      </div>
       <p>Select Tip %</p>
       <div class="tip_grid">
         <div class="t1">5%</div>
@@ -27,13 +29,23 @@
         <div class="t5">25%</div>
         <div class="tC">Custom%</div>
       </div>
-      <p>Number of People</p>
-      <form class="n_people">0</form>
+      <div class="inputs">
+        <p>Number of People</p>
+        <input type="text" class="n_people" placeholder="0"></input>
+      </div>
     </div>
     <div class="container_output">
-      <div>a</div>
-      <div>b</div>
-      <div>c</div>
+      <div class="amount">
+        <p class="label1 standards">Tip Amount<span class="person"> / person</span></p>
+        <div>$0.00</div>
+      </div>
+      <div class="amount">
+        <p class="label2 standards">Total<span class="person"> / person</span></p>
+        <div>$0.00</div>
+      </div>
+      <div class="reset_button" >
+        <button class="disabled">RESET</button>
+      </div>
     </div>
   </div>
   <footer>

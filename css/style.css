@@ -43,32 +43,38 @@ body{
     height: 330px;
     background-color: var(--ch-bcolor);
     padding: 30px;
-    border-radius: 20px;
+    border-radius: 15px;
 }
 
 .container_main > div{
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     text-align: center;
-    border-radius: 20px;
+    border-radius: 10px;
     width: 300px;
 }
 
-.container_input p{
-    width: 300px;
+.inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.container_input p, .inputs p{
     text-align: start;
     margin:15px 0px 5px 10px;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--fo-color);
 }
 
 .container_output{
     background-color: var(--co-bcolor);
 }
 
-.container_output p{
+.container_output > p{
     text-align: start;
     margin:15px 0px 5px 10px;
+    flex-direction: column;
 }
 
 .attribution { font-size: 11px; text-align: center; }
@@ -86,15 +92,39 @@ body{
         padding: 0;
     }
     .container_main {
+        padding-top: 10px;
         flex-direction: column;
         height: 600px;
-        width: 340px;
     }
 
-    .container_main .container_output{
-        flex-grow: 2;
-    }
-    .container_main .container_input{
+    .container_output{
         flex-grow: 1;
     }
+
+    .amount p{
+        padding-top: 0px;
+    }
+
+    .container_input{
+        flex-grow: 2;
+    }
+
+    .bill, .n_people{
+        margin: 0px 10px 0px 10px;
+    }
+
+    .tip_grid{
+        margin-right: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: stretch;
+    }
+
+    .tip_grid div{
+        width: 135px;
+    }
+    
+    .reset_button button{
+        margin: 20px;
+    }
+    
 }
