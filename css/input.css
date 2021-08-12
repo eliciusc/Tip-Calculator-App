@@ -23,11 +23,11 @@
 }
 
 .bill{
-    background-image: url("/images/icon-dollar.svg");
+    background-image: url("../images/icon-dollar.svg");
 }
 
 .n_people{
-    background-image: url("/images/icon-person.svg");
+    background-image: url("../images/icon-person.svg");
 }
 
 .tip_grid{
@@ -70,4 +70,8 @@
     color: var(--co-color);
     text-align: end;
     padding-right: 10px;
+}
+
+.bill:focus, .n_people:focus, .input-custom:focus{
+    outline: 2px solid var(--sc-color);
 }

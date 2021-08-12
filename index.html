@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/output.css">
+  <link rel="stylesheet" href="./css/input.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Tip calculator app</title>
 </head>
@@ -18,20 +20,20 @@
     <div class="container_input">
       <div class="inputs">
         <p>Bill</p>
-        <input type="text" class="bill" placeholder="0"></input>
+        <input bill type="text" class="bill" placeholder="0"></input>
       </div>
       <p>Select Tip %</p>
       <div class="tip_grid">
-        <div class="t1">5%</div>
-        <div class="t2">10%</div>
-        <div class="t3">15%</div>
-        <div class="t4">20%</div>
-        <div class="t5">25%</div>
-        <div tip-custom class="tC">Custom%</div>
+        <div class="t" value="5">5%</div>
+        <div class="t" value="10">10%</div>
+        <div class="t" value="15">15%</div>
+        <div class="t" value="20">20%</div>
+        <div class="t" value="25">25%</div>
+        <input type="text" class="input-custom" placeholder="Custom%"></input>
       </div>
       <div class="inputs">
         <p>Number of People</p>
-        <input type="text" class="n_people" placeholder="0"></input>
+        <input n_people type="text" class="n_people" placeholder="0"></input>
       </div>
     </div>
     <div class="container_output">
@@ -54,6 +56,6 @@
       Coded by <a href="#">Elicius Cordeiro</a>.
     </div>
   </footer>
-  <script src="/app.js"></script>
+  <script src="/app.js" defer></script>
 </body>
 </html>
