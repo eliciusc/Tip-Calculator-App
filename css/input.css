@@ -57,6 +57,11 @@
     color: var(--co-color)
 }
 
+.tip_grid .clicked{
+    background-color: var(--sc-color);
+    color: var(--co-color)
+}
+
 
 .tip_grid .tC{
     text-align: end;

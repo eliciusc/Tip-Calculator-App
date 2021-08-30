@@ -1,47 +1,79 @@
+//constants
+const customTipInput = document.querySelector(".input-custom");
+const customTipDiv = document.querySelectorAll(".t");
+const bill = document.querySelector('.bill');
+const numberOfPeople = document.querySelector('[n_people]');
+const total = document.querySelector("[test]")
+const reset = document.querySelector('.reset_button')
 
-//creat
-// const test = document.querySelector('[class=tC]');
-// function toInput() {
-//     const newInput = document.createElement('input')
-//     Object.assign(newInput, {
-//         className: 'input-custom',
-//         type: 'text',
-//         placeholder: '0',
-//     })
+let statusCalculator= {
+    bill: 0,
+    tip: 0,
+    people: 0,
+    totalTipPerson: 0,
+    totalPerson: 0,
+    showCalc: [false, false, false],
+    reset: false
+}
 
-//     newInput.setAttribute('test', '')
-//     test.replaceWith(newInput)
+//functions
 
-// };
+function resetCalc(obj){
+    bill.value = ""
+    customTipInput.value= ""
+    numberOfPeople.value= ""
+}
 
-const tipPercentage = document.querySelector("[class=tip_grid]", "div", "input");
-tipPercentage.onclick = e => {
-    const con = e.target.className;
-    if (con === 't') {
-       return console.log(e.target.innerHTML);
-    } else if (con === 'input-custom') {
-        const regex = new RegExp(/^[1-9][0-9]?$|^100$/)
-        console.log(e.target.value)
-        // if(regex.test(tipPercentage.onkeyup = keyup)){
-        //     console.log()          
-        // }
+function checkCalcStatus(obj){
+    if(obj.reset === true){
+        
     }
 }
 
-function keyup(e) {
-    let inputTextValue = e.target.value
-    return console.log(inputTextValue)
+function calculate(obj){
+
+    const checker = arr => arr.every(item => item === true)
+    if(checker(obj.showCalc) === true){
+        obj.reset = true
+        obj.totalTipPerson = (((obj.bill * obj.tip) / 100) / obj.people).toFixed(2)
+        obj.totalPerson = (obj.bill + (obj.totalTipPerson * obj.people)).toFixed(2)
+
+        console.log(obj)
+    }
+    
 }
 
-const billValue = document.querySelector('[bill]')
-billValue.onclick = () => {
-    billValue.onkeyup = keyup
-}
+//Events
 
-const numberOfPeople = document.querySelector('[n_people]')
-numberOfPeople.onclick = () => {
-    numberOfPeople.onkeyup = keyup
-}
+bill.addEventListener('input', e => {
+    e.preventDefault()
+    statusCalculator.bill = parseFloat(bill.value)
+    statusCalculator.showCalc[0] = true
+    calculate(statusCalculator)
+})
+
+customTipInput.addEventListener('input', e => {
+    e.preventDefault()
+    statusCalculator.tip = parseFloat(customTipInput.value)
+    statusCalculator.showCalc[1] = true 
+    calculate(statusCalculator)
+})
 
 
+customTipDiv.forEach(item => {item.addEventListener('click', e => {
+    e.preventDefault()
+    let temp = item.innerHTML
+    statusCalculator.tip = parseFloat(temp.slice(0, temp.length -1))
+    statusCalculator.showCalc[1] = true
+    calculate(statusCalculator)
+    })
+})
 
+numberOfPeople.addEventListener('input', e => {
+    e.preventDefault()
+    statusCalculator.people = parseFloat(numberOfPeople.value)
+    statusCalculator.showCalc[2] = true
+    calculate(statusCalculator)
+})
+
+window.onload = resetCalc(statusCalculator)
