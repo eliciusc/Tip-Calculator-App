@@ -6,10 +6,10 @@
     --fo-color : hsl(184, 14%, 43%);
     --fc-color: hsl(189, 41%, 97%);
     --sc-color: hsl(172, 67%, 45%);
-    --outPutDivs-margin: 20px 50px 0px 10px;
+    --outPutDivs-margin: 5% 20% 0% 5%;
 }
 
-.container_output > div{
+.container-output > div{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -17,11 +17,13 @@
 }
 
 .label1{
-    padding: 10px 50px 0px 30px;
+    padding: 0px 30px 0px 30px;
+    width: 50%;
 }
 
 .label2{
-    padding:0px 90px 0px 30px;
+    padding: 0px 70px 0px 30px;
+    width: 50%;
 }
 
 .standards{
@@ -46,9 +48,11 @@
     font-size: 2rem;
     margin: 16px 0px 16px 0px;
     padding-right: 30px;
+    width: 50%;
+    overflow: hidden;
 }
 
-.reset_button button{
+.reset-button button{
     margin-top: 50px;
     padding: 8px 100px;
     border-radius: 5px;
@@ -62,4 +66,9 @@
 .disabled{
     opacity: 0.2;
     cursor: none;
+}
+
+.inputs span{
+    color: orange;
+    margin-left: 27%;
 }
