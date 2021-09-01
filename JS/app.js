@@ -25,7 +25,7 @@ let statusCalculatorCopy = {...statusCalculator};
 
 //functions
 
-//Display000 the message error if user tryes to divide by 0
+//Display the message error if user tryes to divide by 0
 function cantBeZeroError(){
     if(inputSet(numberOfPeople) === 0){
         spanError.innerHTML = "Can't be zero";
@@ -41,17 +41,18 @@ function inputSet(element) {
     let testRegex = regex.test(element.value);
     let valueParsed = element.value;
 
-    //checks for repeated 0 on input
+    //checks for repeated 0 on inputs
     if((valueParsed.charAt(0) === '0') && (valueParsed.charAt(1) === '0')){
         element.value = "0";
     }else if((valueParsed.charAt(0) === '0') && (valueParsed.charAt(1) > '0')){
-        element.value = valueParsed.charAt(1)
+        element.value = valueParsed.charAt(1);
     }
 
     if(testRegex === true){
         return parseFloat(valueParsed);
     }else{
-        element.value = "";
+        let temp = valueParsed.substring(0, (valueParsed.length - 1));
+        element.value = temp;
     }
 }
 
